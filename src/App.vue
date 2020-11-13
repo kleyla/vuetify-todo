@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <v-app light style="background: #FAFAFA">
     <Navbar />
-    <v-main>
+    <v-main class="mx-4 mb-4">
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -22,3 +22,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+#app {
+  background: "#FAFAFA";
+}
+</style>
