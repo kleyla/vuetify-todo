@@ -8,16 +8,18 @@
         <h2>Add a new Project</h2>
       </v-card-title>
       <v-card-text>
-        <v-form class="px-3">
+        <v-form class="px-3" ref="form">
           <v-text-field
             label="Title"
             v-model="title"
             prepend-icon="mdi-folder"
+            :rules="inputRules"
           ></v-text-field>
           <v-textarea
             label="Information"
             v-model="content"
             prepend-icon="mdi-pencil"
+            :rules="inputRules"
           ></v-textarea>
           <v-menu>
             <template v-slot:activator="{ on, attrs }">
@@ -26,12 +28,14 @@
                 label="Picker in menu"
                 prepend-icon="mdi-calendar"
                 readonly
+                :rules="inputRules"
                 v-bind="attrs"
                 v-on="on"
               ></v-text-field>
             </template>
             <v-date-picker v-model="due"> </v-date-picker>
           </v-menu>
+          <v-spacer></v-spacer>
           <v-btn text class="success mx-0 mt-3" @click="submit"
             >Add project</v-btn
           >
@@ -51,12 +55,17 @@ export default {
       title: "",
       content: "",
       due: null,
+      inputRules: [(v) => v.length >= 3 || "Minimum length in 3 characters"],
     };
   },
   methods: {
     submit() {
       //   console.log(this.title, this.content);
-      alert(`${this.title} ${this.content}`);
+      if (this.$refs.form.validate()) {
+        alert(`${this.title} ${this.content}`);
+      } else {
+        console.error("Formulario con errores");
+      }
     },
   },
   computed: {
