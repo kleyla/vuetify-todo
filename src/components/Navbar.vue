@@ -36,11 +36,14 @@
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app class="primary">
       <v-row>
-        <v-col class="mt-5 text-center">
+        <v-col cols="12" class="mt-5 text-center">
           <v-avatar size="100">
             <img src="me1.jpg" alt="karen" />
           </v-avatar>
           <p class="white--text subheading mt-1">Karen</p>
+        </v-col>
+        <v-col cols="12 text-center">
+          <Popup />
         </v-col>
       </v-row>
       <v-list>
@@ -63,8 +66,14 @@
     </v-navigation-drawer>
   </nav>
 </template>
+
 <script>
+import Popup from "./Popup.vue";
+
 export default {
+  components: {
+    Popup,
+  },
   data() {
     return {
       drawer: false,
