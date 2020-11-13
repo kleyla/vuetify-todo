@@ -1,24 +1,11 @@
-# todo-karen
+# VUETITY
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+vue add vuetify
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Icons:
 
-### Lints and fixes files
 ```
-npm run lint
+npm install @mdi/js -D
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
