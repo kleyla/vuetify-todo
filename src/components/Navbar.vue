@@ -16,6 +16,14 @@
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app class="primary">
+      <v-row>
+        <v-col class="mt-5 text-center">
+          <v-avatar size="100">
+            <img src="me1.jpg" alt="karen" />
+          </v-avatar>
+          <p class="white--text subheading mt-1">Karen</p>
+        </v-col>
+      </v-row>
       <v-list>
         <v-list-item
           v-for="(link, index) in links"
