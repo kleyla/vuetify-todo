@@ -1,6 +1,9 @@
 {
   "name": "todo-karen",
   "version": "0.1.0",
+  "engines": {
+    "node": "10.19.0"
+  },
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve",
