@@ -52,7 +52,7 @@
 <script>
 import format from "date-fns/format";
 import parseISO from "date-fns/parseISO";
-import db from "@/firebase";
+import db from "./../firebase";
 
 export default {
   data() {
